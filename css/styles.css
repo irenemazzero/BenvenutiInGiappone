@@ -1,0 +1,1383 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 50px;
+    margin-left: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.carousel {
+    margin-top: 93px;
+    background-color: #ddd;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.carousel-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.carousel-text h1 {
+    margin-bottom: 10px;
+}
+
+.carousel-text p {
+    color: white;
+    margin-top: 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Due colonne */
+    gap: 40px; /* Spazio tra i blocchi */
+    width: 80%;
+    margin: 20px auto;
+}
+
+.content a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 20px;
+    border-radius: 10px;
+    height: 300px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.content a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: grayscale(90%);
+    transition: filter 0.5s;
+    z-index: -1;
+}
+
+.content a:nth-child(1)::before {
+    background-image: url('../images/sfondoViaggi.png'); /* Immagine per il primo quadrato */
+}
+
+.content a:nth-child(2)::before {
+    background-image: url('../images/sfondoCultura.jpg'); /* Immagine per il secondo quadrato */
+}
+
+.content a:nth-child(3)::before {
+    background-image: url('../images/sfondoStoria.jpg'); /* Immagine per il terzo quadrato */
+}
+
+.content a:nth-child(4)::before {
+    background-image: url('../images/sfondoModa.jpg'); /* Immagine per il quarto quadrato */
+}
+
+.content a:hover::before {
+    filter: grayscale(0%);
+}
+
+.content .main-title {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.content .sub-title {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer nav {
+    margin-top: 10px;
+}
+
+footer nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+/* Stili specifici per la pagina sui viaggi e turismo */
+/* Stili per il menù della pagina Moda e Cultura Pop */
+section#viaggi-sezioni {
+    margin-top: 130px;
+}
+
+#viaggi-sezioni {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.viaggi-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.viaggi-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(33.33% - 20px);
+    height: 200px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.viaggi-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+
+.viaggi-box:nth-child(1)::before {
+    background-image: url('../images/sfondoPrincipali-destinazioni.jpg'); /* Immagine per il primo rettangolo */
+}
+
+.viaggi-box:nth-child(2)::before {
+    background-image: url('../images/sfondoAttrazioni-turistiche.jpeg'); /* Immagine per il secondo rettangolo */
+}
+
+.viaggi-box:nth-child(3)::before {
+    background-image: url('../images/sfondoTrasporti.jpeg'); /* Immagine per il terzo rettangolo */
+}
+
+.viaggi-box:hover::before {
+    filter: grayscale(0%);
+}
+
+.viaggi-title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Stile per le destinazioni */
+section#principali-destinazioni {
+    margin-top: 96px;
+}
+
+.destinazione {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.destinazione .destinazione-img {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.destinazione .destinazione-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.destinazione .destinazione-info {
+    flex: 1;
+}
+
+.destinazione h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.destinazione p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.destinazione .extra-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.destinazione.expanded .extra-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.destinazione .toggle-indicator {
+    font-size: 1.2em;
+    color: #BE1E2D;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.destinazione .toggle-indicator:hover {
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.destinazione.expanded .toggle-indicator {
+    color: #BE1E2D;
+}
+
+
+/* Stili per le attrazioni turistiche */
+section#attrazioni-turistiche {
+    margin-top: 96px;
+}
+
+.attrazione {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.attrazione .attrazione-img {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.attrazione .attrazione-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.attrazione .attrazione-info {
+    flex: 1;
+}
+
+.attrazione h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.attrazione p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.attrazione .extra-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.attrazione.expanded .extra-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.attrazione .toggle-indicator {
+    font-size: 1.2em;
+    color: #BE1E2D;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.attrazione .toggle-indicator:hover {
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.attrazione.expanded .toggle-indicator {
+    color: #BE1E2D;
+}
+
+
+/* Stili per i trasporti */
+section#trasporti {
+    margin-top: 96px;
+}
+
+.trasporto {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.trasporto .trasporto-img {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    border-radius: 15px; 
+    overflow: hidden; 
+}
+
+.trasporto .trasporto-img img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.trasporto .trasporto-info {
+    flex: 1; 
+}
+
+.trasporto h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.trasporto p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left; 
+}
+
+.trasporto .extra-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.trasporto.expanded .extra-content {
+    max-height: 500px; 
+    opacity: 1;
+}
+
+.trasporto .toggle-indicator {
+    font-size: 1.2em;
+    color: #BE1E2D; 
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.trasporto .toggle-indicator:hover {
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.trasporto.expanded .toggle-indicator {
+    color: #BE1E2D; 
+}
+
+
+/* Stili specifici per la pagina su Cultura e Tradizioni */
+/* Stili per il menù della pagina Moda e Cultura Pop */
+section#cultura-sezioni {
+    margin-top: 130px;
+}
+
+#cultura-sezioni {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.cultura-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.cultura-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(33.33% - 20px);
+    height: 200px; 
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.cultura-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.cultura-box:nth-child(1)::before {
+    background-image: url('../images/sfondoFestivita-tradizioni.jpeg'); /* Immagine per il primo rettangolo */
+}
+
+.cultura-box:nth-child(2)::before {
+    background-image: url('../images/sfondoCucina.jpeg'); /* Immagine per il secondo rettangolo */
+}
+
+.cultura-box:nth-child(3)::before {
+    background-image: url('../images/sfondoArte-tradizionale.jpeg'); /* Immagine per il terzo rettangolo */
+}
+
+.cultura-box:hover::before {
+    filter: grayscale(0%); 
+}
+
+.cultura-title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Stile per le festività */
+section#festivita-tradizioni {
+    margin-top: 96px;
+}
+
+.festivita {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.festivita .festivita-img {
+    flex: 0 0 auto; 
+    margin-right: 20px; 
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.festivita .festivita-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.festivita .festivita-info {
+    flex: 1;
+}
+
+.festivita h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.festivita p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.festivita .extra-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.festivita.expanded .extra-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.festivita .toggle-indicator {
+    font-size: 1.2em;
+    color: #BE1E2D;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.festivita .toggle-indicator:hover {
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.festivita.expanded .toggle-indicator {
+    color: #BE1E2D;
+}
+
+
+/* Stile per i piatti della cucina giapponese */
+section#cucina {
+    margin-top: 96px;
+}
+
+.piatto {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.piatto .piatto-img {
+    flex: 0 0 auto; 
+    margin-right: 20px;
+    border-radius: 15px;
+    overflow: hidden; 
+}
+
+.piatto .piatto-img img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.piatto .piatto-info {
+    flex: 1; 
+}
+
+.piatto h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.piatto p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.piatto .extra-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.piatto.expanded .extra-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.piatto .toggle-indicator {
+    font-size: 1.2em;
+    color: #BE1E2D;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.piatto .toggle-indicator:hover {
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.piatto.expanded .toggle-indicator {
+    color: #BE1E2D; 
+}
+
+
+/* Stile per l'arte tradizionale */
+section#arte-tradizionale {
+    margin-top: 96px;
+}
+
+.arte {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.arte .arte-img {
+    flex: 0 0 auto; 
+    margin-right: 20px; 
+    border-radius: 15px; 
+    overflow: hidden;
+}
+
+.arte .arte-img img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.arte .arte-info {
+    flex: 1;
+}
+
+.arte h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.arte p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.arte .extra-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.arte.expanded .extra-content {
+    max-height: 500px; 
+    opacity: 1;
+}
+
+.arte .toggle-indicator {
+    font-size: 1.2em;
+    color: #BE1E2D; 
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.arte .toggle-indicator:hover {
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.arte.expanded .toggle-indicator {
+    color: #BE1E2D;
+}
+
+
+/* Stili specifici per la pagina su Storia e Patrimonio */
+/* Stili per il menù della pagina Moda e Cultura Pop */
+section#storia-sezioni {
+    margin-top: 130px;
+}
+
+#storia-sezioni {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.storia-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.storia-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(33.33% - 20px);
+    height: 200px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.storia-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.storia-box:nth-child(1)::before {
+    background-image: url('../images/sfondoPeriodi-storici.jpeg'); /* Immagine per il primo rettangolo */
+}
+
+.storia-box:nth-child(2)::before {
+    background-image: url('../images/sfondoSiti-unesco.jpg'); /* Immagine per il secondo rettangolo */
+}
+
+.storia-box:nth-child(3)::before {
+    background-image: url('../images/sfondoMusei-gallerie.jpg'); /* Immagine per il terzo rettangolo */
+}
+
+.storia-box:hover::before {
+    filter: grayscale(0%);
+}
+
+.storia-title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    z-index: 1; 
+}
+
+
+/* Stile per i periodi storici */
+section#periodi-storici {
+    margin-top: 96px;
+}
+
+.periodo {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.periodo .periodo-img {
+    flex: 0 0 auto; 
+    margin-right: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.periodo .periodo-img img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.periodo .periodo-info {
+    flex: 1;
+}
+
+.periodo h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.periodo p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.periodo .extra-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.periodo.expanded .extra-content {
+    max-height: 500px; 
+    opacity: 1;
+}
+
+.periodo .toggle-indicator {
+    font-size: 1.2em;
+    color: #BE1E2D;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.periodo .toggle-indicator:hover {
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.periodo.expanded .toggle-indicator {
+    color: #BE1E2D;
+}
+
+
+/* Stile per i siti del patrimonio mondiale */
+section#siti-unesco {
+    margin-top: 96px;
+}
+
+.sito {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sito .sito-img {
+    flex: 0 0 auto;
+    margin-right: 20px; 
+    border-radius: 15px; 
+    overflow: hidden; 
+}
+
+.sito .sito-img img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sito .sito-info {
+    flex: 1; 
+}
+
+.sito h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sito p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left; 
+}
+
+.sito .extra-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.sito.expanded .extra-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.sito .toggle-indicator {
+    font-size: 1.2em;
+    color: #BE1E2D; 
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.sito .toggle-indicator:hover {
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.sito.expanded .toggle-indicator {
+    color: #BE1E2D; 
+}
+
+
+/* Stile per i musei */
+section#musei-gallerie {
+    margin-top: 96px;
+}
+
+.museo {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.museo .museo-img {
+    flex: 0 0 auto; 
+    margin-right: 20px;
+    border-radius: 15px; 
+    overflow: hidden; 
+}
+
+.museo .museo-img img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.museo .museo-info {
+    flex: 1; 
+}
+
+.museo h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.museo p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left; 
+}
+
+.museo .extra-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.museo.expanded .extra-content {
+    max-height: 500px; 
+    opacity: 1;
+}
+
+.museo .toggle-indicator {
+    font-size: 1.2em;
+    color: #BE1E2D; 
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.museo .toggle-indicator:hover {
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.museo.expanded .toggle-indicator {
+    color: #BE1E2D; 
+}
+
+
+/* Stili specifici per la pagina su Moda e Cultura Pop */
+/* Stili per il menù della pagina Moda e Cultura Pop */
+section#moda-sezioni {
+    margin-top: 130px;
+}
+
+#moda-sezioni {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.moda-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.moda-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(33.33% - 20px); 
+    height: 200px; 
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.moda-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.moda-box:nth-child(1)::before {
+    background-image: url('../images/sfondoStili-di-moda.jpeg'); /* Immagine per il primo rettangolo */
+}
+
+.moda-box:nth-child(2)::before {
+    background-image: url('../images/sfondoCultura-pop.jpg'); /* Immagine per il secondo rettangolo */
+}
+
+.moda-box:nth-child(3)::before {
+    background-image: url('../images/sfondoTecnologia-innovazione.jpeg'); /* Immagine per il terzo rettangolo */
+}
+
+.moda-box:hover::before {
+    filter: grayscale(0%);
+}
+
+.moda-title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    z-index: 1; 
+}
+
+
+/* Stile per gli stili di moda */
+section#stili-di-moda {
+    margin-top: 96px;
+}
+
+.stile {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.stile .stile-img {
+    flex: 0 0 auto; 
+    margin-right: 20px; 
+    border-radius: 15px; 
+    overflow: hidden; 
+}
+
+.stile .stile-img img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.stile .stile-info {
+    flex: 1; 
+}
+
+.stile h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stile p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.stile .extra-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.stile.expanded .extra-content {
+    max-height: 500px; 
+    opacity: 1;
+}
+
+.stile .toggle-indicator {
+    font-size: 1.2em;
+    color: #BE1E2D; 
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.stile .toggle-indicator:hover {
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.stile.expanded .toggle-indicator {
+    color: #BE1E2D; 
+}
+
+
+/* Stile per gli elementi della cultura pop */
+section#cultura-pop {
+    margin-top: 96px;
+}
+
+.pop {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.pop .pop-img {
+    flex: 0 0 auto; 
+    margin-right: 20px;
+    border-radius: 15px; 
+    overflow: hidden; 
+}
+
+.pop .pop-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.pop .pop-info {
+    flex: 1; 
+}
+
+.pop h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pop p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left; 
+}
+
+.pop .extra-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.pop.expanded .extra-content {
+    max-height: 500px; 
+    opacity: 1;
+}
+
+.pop .toggle-indicator {
+    font-size: 1.2em;
+    color: #BE1E2D; 
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.pop .toggle-indicator:hover {
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.pop.expanded .toggle-indicator {
+    color: #BE1E2D; 
+}
+
+
+/* Stile per la tecnologia e le innovazioni */
+section#tecnologia-innovazione {
+    margin-top: 96px;
+}
+
+.tech {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tech .tech-img {
+    flex: 0 0 auto; 
+    margin-right: 20px; 
+    border-radius: 15px; 
+    overflow: hidden; 
+}
+
+.tech .tech-img img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.tech .tech-info {
+    flex: 1; 
+}
+
+.tech h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tech p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left; 
+}
+
+.tech .extra-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.tech.expanded .extra-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.tech .toggle-indicator {
+    font-size: 1.2em;
+    color: #BE1E2D; 
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.tech .toggle-indicator:hover {
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.tech.expanded .toggle-indicator {
+    color: #BE1E2D; 
+}
+
